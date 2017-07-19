@@ -1,0 +1,16 @@
+<article *ngIf="article" class="bordered">
+	<div class="row">
+		<div class="col-md-3 col-xs-3">
+		<a href="" class="thumbnail" >
+			<img [src]="article.file" alt="" class=" img-responsive">
+		</a>
+			
+		</div>
+		<div class="col-md-9">
+			<h2 class="text-muted titre-art"> {{ article.titre }}</h2>
+			<p>{{ article.contenu }}</p>
+		</div>
+	</div>
+	
+</article>
+<button (click)="goBack()">Back</button>

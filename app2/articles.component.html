@@ -1,0 +1,52 @@
+<h1> Listes des article </h1>
+
+<article *ngFor="let article of articles">
+	<div class="row">
+		<div class="col-md-3 col-xs-3">
+		<a href="" class="thumbnail" >
+			<img [src]="article.file" alt="" class=" img-responsive">
+		</a>
+			
+		</div>
+		<div class="col-md-9">
+			<h2 class="text-muted titre-art" (click)="onSelect(article)" > {{ article.titre }}</h2>
+			<p>{{ article.titre }}</p>
+		</div>
+	</div>
+	
+</article>
+
+	<article-detail [article]="selectedArticle"></article-detail>
+
+<!--  <article *ngIf="selectedArticle">
+ 	<div class="row">
+ 		<div class="col-md-3 col-xs-3">
+ 		<a href="" class="thumbnail" >
+ 			<img [src]="selectedArticle.file" alt="" class=" img-responsive">
+ 		</a>
+ 			
+ 		</div>
+ 		<div class="col-md-9">
+ 				<div class="input-group">
+ 				  <input type="text" class="form-control" [(ngModel)]="article.titre" aria-describedby="basic-addon2">
+ 				  <span class="input-group-addon" id="basic-addon2">titre</span>
+ 				</div>
+ 
+ 			<p>{{ selectedArticle.contenu }}</p>
+ 		</div>
+ 	</div>
+ 	
+ </article> --> 
+
+<!-- <article-detail [article]="selectedArticle"></article-detail>
+ -->
+ <style>
+	
+	.titre-art{
+		border-top:1px solid #eee;
+		border-bottom:1px solid #eee;
+		padding: 5px 0;
+		font-size: 20px;
+		margin:0;
+	}
+</style>
